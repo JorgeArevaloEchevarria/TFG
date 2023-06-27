@@ -1,0 +1,71 @@
+\chapter{Análisis de Requisitos}
+\label{cap:AnalisisDeRequisitos}
+
+El análisis de requisitos es una parte del proceso de desarrollo de software. En este capítulo, se detallarán los requisitos necesarios para el correcto funcionamiento del proyecto. El objetivo principal del análisis de requisitos es identificar las necesidades del usuario y traducirlas en especificaciones detalladas y claras para que el equipo de desarrollo pueda diseñar y construir la aplicación.
+
+ A continuación se presentan los requisitos para los ingredientes, platos, bebidas, menús, mesas y comandas, detallando los campos necesarios para cada uno de ellos y las restricciones de negocio y técnicas que deben ser consideradas en su implementación.
+
+\section{Ingredientes}
+
+\begin{itemize}
+\item Al añadir un nuevo ingrediente no se puede dejar ningún campo vacío del formulario: nombre, categoría, número de unidades, tipo de medida del ingrediente y alerta mínima de existencias.
+\item Al editar un ingrediente se puede modificar cualquier campo.
+\item No puede haber dos ingredientes con el mismo nombre.
+\item Los ingredientes tendrán un valor mínimo de existencias, si el \textit{stock} es inferior a ese valor, saltará una alarma al entrar a la aplicación.
+
+\end{itemize}
+
+\section{Platos}
+
+\begin{itemize}
+\item Al añadir un plato no se puede dejar ningún campo vacío del formulario: nombre, categoría, disponibilidad y lista de ingredientes.
+\item Al añadir un plato se mostrará una lista con todos los ingredientes disponibles, para elegir los que se requieran.
+\item Los platos deben tener al menos un ingrediente.
+\item Todos los ingredientes que se añadan deben tener una cantidad asociada, que se corresponde con la cantidad de una ración.
+\item Al editar un plato se puede modificar cualquier campo.
+\item No puede haber dos platos con el mismo nombre.
+
+\end{itemize}
+
+\section{Bebidas}
+
+\begin{itemize}
+\item Al añadir una bebida no se puede dejar ningún campo vacío del formulario: nombre, cantidad y alerta mínima de existencias.
+\item Al editar una bebida se puede modificar cualquier campo.
+\item No puede haber dos bebidas con el mismo nombre.
+\item Las bebidas tendrán un valor mínimo de existencias, si el \textit{stock} es inferior a ese valor, saltará una alarma al entrar a la aplicación.
+
+\end{itemize}
+
+\section{Menús}
+
+\begin{itemize}
+\item El menú del día constará de una serie de primeros platos, segundos platos y postres.
+
+\item Por cada plato que se introduce en el menú se seleccionará un número fijo de raciones que se harán ese día, una vez se acaben no habrá más.
+
+\item Al seleccionar los platos para el menú del día se tendrá en cuenta el \textit{stock} de los ingredientes que haya en ese momento. Cuando se guarde el menú se calculará si disponemos de los ingrdientes suficientes para hacer todas las raciones que se hayan introducido. Si varios platos utilizan un mismo ingrediente, se tendrá en cuenta en el \textit{stock} disponible.
+
+\item Solo habrá un menú disponible a la vez.
+
+\end{itemize}
+
+\section{Mesas}
+
+\begin{itemize}
+\item Al añadir una mesa no se puede dejar ningún campo vacío del formulario.
+\item Cada mesa tendrá un número único que la identifica.
+\item Al editar una mesa se puede modificar cualquier campo.
+\item No puede haber dos mesas con el mismo identificador.
+
+\end{itemize}
+
+\section{Comandas}
+
+\begin{itemize}
+\item Cada comanda irá asociada única y exclusivamente a una mesa.
+\item Una comanda podrá ser de dos tipos: un menú del día o selección de platos de la carta. Los platos de la carta estarán sujetos a la disponibilidad de ingredientes que haya en ese momento.
+\item Al añadir un plato del menú del día no se puede superar la cantidad que esté disponible en ese momento.
+\item Al servir los platos pedidos a la mesa se podrán marcar como entregado.
+\item Cada comanda tendrá una ventana donde se muestran todos los platos y bebidas pedidas hasta el momento, así como un botón que dirá si ya han sido entregados o no.
+\end{itemize}

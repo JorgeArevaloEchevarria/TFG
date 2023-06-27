@@ -1,0 +1,46 @@
+\chapter{Conclusiones y Trabajo Futuro}
+\label{cap:conclusiones}
+
+Una vez finalizado el proyecto, podemos decir que el objetivo de crear una aplicación para el mantenimiento del \textit{stock} de restaurantes se ha cumplido. Se ha quedado una interfaz muy intuitiva y sencilla de utilizar, que era el objetivo principal. Los objetivos alcanzados han sido:
+
+\begin{itemize} 
+
+\item Creación de distintas vistas para gestionar el \textit{stock} de un restaurante desde la visión del propietario del local.
+
+\item Diseño de una base de datos para almacenar los ingredientes, bebidas y platos donde poder acceder y seleccionar la información.
+
+\item Implementación de la aplicación móvil para que se puedan tomar nota desde cada mesa y simultáneamente se actualice el \textit{stock} del restaurante.
+
+\item Implementación de la aplicación web para poder gestionar el \textit{stock} de los ingredientes, bebidas y platos del restaurante y se actualice la base de datos al momento.
+ 
+\item Diseñar un aspecto visual agradable que haga una mejor experiencia del usuario, tanto en la aplicación web como en la aplicación móvil.
+
+ \end{itemize}
+
+Todas las funcionalidades se han desarrollado de manera independiente, tratando de tener un código limpio y organizado, lo que nos permitirá añadir nuevas funcionalidades de manera cómoda y sencilla.
+
+En cuanto a la funcionalidad de las aplicaciones, se han solventado los requisitos mínimos para poder gestionar un restaurante, pero es fácil añadir nuevas características que sean requeridas en cada establecimiento en particular.
+
+Como trabajo futuro nos gustaría enumerar una serie de ideas que se podrían implementar:
+\begin{itemize}
+
+ \item \textbf{Limitaciones de Firebase}. Se ha usado Firebase para la implementación, ya que es una base de datos muy práctica para proyectos pequeños. 
+Sin embargo, se ha usado un plan de datos gratuito, el cual tiene límite de consultas y de usuarios simultáneos. Para implementarlo en un restaurante se debería pasar a un plan de pago. Si se quiere usar para grandes cadenas de restaurantes, por ejemplo, habría que estudiar el rendimiento y la posibilidad de cambiar a otra base de datos
+
+\item \textbf{Mejoras en el dominio}. Al igual que en la base de datos, se ha usado una página web que nos ofrece un dominio por tiempo limitado. Habría que estudiar la posibilidad de comprar y hacernos con el dominio \textit{TakeOrderAdmin.es.}
+
+\item \textbf{Alertas.}
+Se podría añadir una funcionalidad para notificar mediante un email al encargado del \textit{stock} de las alertas asociadas a los ingredientes y bebidas.
+
+\item \textbf{Precio y proveedores.}
+Implementar campos para guardar los precios y los proveedores de los ingredientes y bebidas sería muy útil.
+
+\item \textbf{Menús del día.}
+Sería interesante tener una serie de menús del día ya predefinidos, por ejemplo para cada día de la semana, y poder cargarlos rápidamente.
+
+También se podría añadir una funcionalidad para poder acceder a estos menús del día o a toda la carta mediante un código QR o poder imprimirlos con un formato adecuado.
+
+\item \textbf{Creación de usuarios}.
+Se podrían integrar la creación usuarios, de tal forma que podamos restringir algunas funcionalidades a ciertos trabajadores, o poder mostrar alguna información sensible como precios y proveedores solo al administrador del \textit{stock}.
+\end{itemize}
+
